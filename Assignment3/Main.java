@@ -2,7 +2,7 @@
 * Leah Kupfer
  */
 
-//Driver class to test Problems 19 & 20
+
 public class Main {
 
     public static void main(String[] args) {
