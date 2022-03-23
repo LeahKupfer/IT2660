@@ -5,11 +5,11 @@
  */
 public class MergeSort
 {
-    private int[] numBank;  //The main list that will store the unsorted numbers and then the numbers after they are sorted
-    private int[] temp;    //The temporary list that will be used to sort the numbers
-    private int left;     //The left index of the list
-    private int right;   //The right index of the list
-    private int size;   //The size of the list
+    private int[] numBank; 
+    private int[] temp;    
+    private int left;     
+    private int right;   
+    private int size;   
   
     public MergeSort(int[] list)
     {
@@ -21,12 +21,11 @@ public class MergeSort
       
     }
   
-    public void sort() //Method that starts the sorting algorithm using initiated variables from the constructor
+    public void sort() 
     {
       sort(this.numBank, this.temp, this.left, this.right);
     }
     
-       //Method that takes the sorted lists of numbers and merges them into a single merged list
     public static void sort(int[] list, int[] temp, int leftIndex, int rightIndex)
     {
         int midIndex, total;
@@ -39,10 +38,9 @@ public class MergeSort
   
        midIndex = (rightIndex + leftIndex) / 2;
 
-       sort(list, temp, leftIndex, midIndex); //Reduced problem 1: Sorts the left half of the list
-       sort(list, temp, midIndex + 1, rightIndex);//Reduced Problem 2: Sorts the right half of the list
-
-        merge(list, temp, leftIndex,  midIndex + 1, rightIndex);//General Solution: sorted lists can be merged into a single sorted list
+       sort(list, temp, leftIndex, midIndex); 
+       sort(list, temp, midIndex + 1, rightIndex);
+        merge(list, temp, leftIndex,  midIndex + 1, rightIndex);
         return;
         
     }
@@ -55,7 +53,7 @@ public class MergeSort
 
       while( (leftIndex <= leftEnd) && (midIndex <= rightIndex) ) //Sorts the list 
       {
-          if(list[leftIndex] <= list[midIndex]) //If the element is less than the rightmost element then it is kept at the same index
+          if(list[leftIndex] <= list[midIndex]) 
           {                                     //in the left sublist
               temp[tempIndex] = list[leftIndex];
 
