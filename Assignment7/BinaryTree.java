@@ -69,11 +69,11 @@ public class BinaryTree
                  System.out.println("Invalid Number(s) Entered!");
               }
           break;
-          case "3": //Delete
+          case "3": 
             System.out.println("Enter a student's full name to delete their information: ");
             System.out.println("Information Deleted? " + delete(keyboard.nextLine() ) );
           break;
-          case "4": //Update
+          case "4": 
             System.out.println("Enter the full name of the student that you wish to update: ");
             String s = keyboard.nextLine();
             System.out.println("Now, enter the new name and gpa information, separated by '|', to update the listing: ");
